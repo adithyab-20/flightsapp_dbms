@@ -1,0 +1,17 @@
+body { font-family: -apple-system, system-ui, sans-serif; background: #f5f5f7; color: #1d1d1f; margin: 0; }
+.container { max-width: 800px; margin: 40px auto; padding: 32px; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+h1 { margin-top: 0; }
+h2 { margin-top: 28px; font-size: 1.1em; }
+.meta { color: #666; font-size: 0.9em; }
+.error { color: #c00; }
+form label { display: block; margin: 12px 0; font-size: 0.9em; color: #444; }
+form input { display: block; margin-top: 4px; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; width: 220px; }
+button { margin-top: 16px; padding: 10px 20px; background: #0071e3; color: #fff; border: none; border-radius: 6px; font-size: 1em; cursor: pointer; }
+button:hover { background: #0058b8; }
+table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #fafafa; font-weight: 600; font-size: 0.9em; }
+table.kv th { width: 160px; background: #fafafa; }
+a { color: #0071e3; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.seats { font-family: monospace; background: #fafafa; padding: 12px; border-radius: 4px; word-break: break-word; }

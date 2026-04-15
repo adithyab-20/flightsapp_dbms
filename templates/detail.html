@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flight {{ info.flight_number }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Flight {{ info.flight_number }} &middot; {{ info.departure_date }}</h1>
+    <p class="meta"><a href="javascript:history.back()">&larr; Back</a></p>
+
+    <table class="kv">
+      <tr>
+        <th>Airline</th>
+        <td>{{ info.airline_name }}</td>
+      </tr>
+      <tr>
+        <th>Route</th>
+        <td>{{ info.origin_code }} &rarr; {{ info.dest_code }}</td>
+      </tr>
+      <tr>
+        <th>Departure time</th>
+        <td>{{ info.departure_time }} GMT</td>
+      </tr>
+      <tr>
+        <th>Duration</th>
+        <td>{{ info.duration }}</td>
+      </tr>
+      <tr>
+        <th>Aircraft</th>
+        <td>{{ info.plane_type }}</td>
+      </tr>
+      <tr>
+        <th>Capacity</th>
+        <td>{{ info.capacity }}</td>
+      </tr>
+      <tr>
+        <th>Available seats</th>
+        <td>{{ available }} of {{ info.capacity }}</td>
+      </tr>
+    </table>
+
+    <h2>Taken seats ({{ taken|length }})</h2>
+    {% if taken %}
+    <p class="seats">{{ taken|join(', ') }}</p>
+    {% else %}
+    <p>No seats booked yet.</p>
+    {% endif %}
+  </div>
+</body>
+
+</html>

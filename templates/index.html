@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flight Search</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Flight Search</h1>
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    <form action="/search" method="get">
+      <label>Origin airport code
+        <input type="text" name="origin" maxlength="3" required placeholder="JFK">
+      </label>
+      <label>Destination airport code
+        <input type="text" name="dest" maxlength="3" required placeholder="LAX">
+      </label>
+      <label>From date
+        <input type="date" name="date_from" required>
+      </label>
+      <label>To date
+        <input type="date" name="date_to" required>
+      </label>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</body>
+</html>
